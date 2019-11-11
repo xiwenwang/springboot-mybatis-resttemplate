@@ -1,6 +1,9 @@
 HELP.md
 target/
 site/target/
+dao/target/
+model/target/
+service/target/
 
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
