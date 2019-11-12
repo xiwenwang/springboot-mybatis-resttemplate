@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: @spring.profiles.active@
+
+server:
+  port: 7099
+  servlet:
+    context-path: /pindan-moren
