@@ -1,7 +1,48 @@
 spring:
   profiles:
     active: @profiles.active@
+
+server:
+  port: 7099
+  servlet:
+    context-path: /pindan-prod
+
+elasticseach:
+  host: pindan-prod
+
+
+---
+spring:
+  profiles: dev
+
+server:
+  port: 8011
+  servlet:
+    context-path: /pindan-dev
+
+elasticseach:
+  host: pindan-dev
+
+---
+spring:
+  profiles: prod
+
 server:
   port: 8012
   servlet:
     context-path: /pindan-prod
+
+elasticseach:
+  host: pindan-prod
+
+---
+spring:
+  profiles: default
+
+server:
+  port: 7099
+  servlet:
+    context-path: /pindan-default
+
+elasticseach:
+  host: pindan-default

@@ -1,7 +1,0 @@
-spring:
-  profiles:
-    active: @profiles.active@
-server:
-  port: 8011
-  servlet:
-    context-path: /pindan-dev
