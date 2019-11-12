@@ -1,7 +1,6 @@
 spring:
   profiles:
-    active: @spring.profiles.active@
-
+    active: @profiles.active@
 server:
   port: 8012
   servlet:

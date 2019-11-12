@@ -63,7 +63,6 @@
 		<module>service</module>
 		<module>site</module>
 	</modules>
-
     <build>
         <plugins>
             <plugin>
@@ -89,7 +88,7 @@
 		<profile>
 			<id>dev</id>
 			<properties>
-				<spring.profiles.active>dev</spring.profiles.active>
+				<profiles.active>dev</profiles.active>
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -99,7 +98,7 @@
 		<profile>
 			<id>prod</id>
 			<properties>
-				<spring.profiles.active>prod</spring.profiles.active>
+				<profiles.active>prod</profiles.active>
 			</properties>
 		</profile>
 	</profiles>

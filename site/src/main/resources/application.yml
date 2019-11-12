@@ -1,8 +1,7 @@
 spring:
   profiles:
-    active: @spring.profiles.active@
-
+    active: @profiles.active@
 server:
-  port: 7099
+  port: 8012
   servlet:
-    context-path: /pindan-moren
+    context-path: /pindan-prod
