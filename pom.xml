@@ -59,7 +59,7 @@
 
 	<modules>
 		<module>dao</module>
-		<module>model</module>
+		<module>iao</module>
 		<module>service</module>
 		<module>site</module>
 	</modules>
@@ -82,7 +82,9 @@
                     <skipTests>true</skipTests>    <!--默认关掉单元测试 -->
                 </configuration>
             </plugin>
+
         </plugins>
+
     </build>
 	<profiles>
 		<profile>
@@ -101,6 +103,7 @@
 				<profiles.active>prod</profiles.active>
 			</properties>
 		</profile>
+
 	</profiles>
 
 </project>

@@ -1,0 +1,49 @@
+spring:
+  profiles:
+    active: @profiles.active@
+
+server:
+  port: 7099
+  servlet:
+    context-path: /pindan-prod
+
+elasticseach:
+  host: pindan-prod
+
+mybatis:
+  configLocation: classpath:config/mybatis-config.xml
+  mapperLocations: classpath*:com/aba/pindan/dao/*Mapper.xml
+
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.105:3306/d_yaneuxe?useUnicode=true&characterEncoding=utf-8
+    username: d_yanxue_rw
+    password: xytx1314
+
+server:
+  port: 8011
+  servlet:
+    context-path: /pindan-dev
+
+elasticseach:
+  host: pindan-dev
+
+---
+spring:
+  profiles: prod
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: root
+
+server:
+  port: 8012
+  servlet:
+    context-path: /pindan-prod
+
+elasticseach:
+  host: pindan-prod

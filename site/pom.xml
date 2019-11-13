@@ -10,7 +10,6 @@
     </parent>
     <artifactId>site</artifactId>
     <packaging>jar</packaging>
-
     <dependencies>
         <dependency>
             <groupId>com.aba</groupId>
@@ -18,7 +17,6 @@
             <version>1.0.0</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -28,11 +26,17 @@
                     <!-- 指定该Main Class为全局的唯一入口 -->
                     <mainClass>com.aba.pindan.PindanApplication</mainClass>
                 </configuration>
-
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>
+                                repackage
+                            </goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
         <finalName>pindan</finalName>
     </build>
-
-
 </project>
