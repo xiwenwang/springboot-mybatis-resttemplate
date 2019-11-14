@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC " -//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <classPathEntry
+            location="/Users/xxx/.m2/repository/mysql/mysql-connector-java/8.0.18/mysql-connector-java-8.0.18.jar"/>
+    <context id="default" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="false"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/test"
+                        userId="root"
+                        password="******"/>
+
+
+        <javaModelGenerator targetPackage="com.aba.pindan.dao.entity"
+                            targetProject="/Users/xxx/workspace/Java/MyPrivate/pindan-test/dao/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+
+        <sqlMapGenerator targetPackage="mapper"
+                         targetProject="/Users/xxx/workspace/Java/MyPrivate/pindan-test/dao/src/main/resources/">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+
+        <javaClientGenerator targetPackage="com.aba.pindan.dao.mapper"
+                             targetProject="/Users/xxx/workspace/Java/MyPrivate/pindan-test/dao/src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table tableName="t_auth_menu">
+        </table>
+    </context>
+</generatorConfiguration>

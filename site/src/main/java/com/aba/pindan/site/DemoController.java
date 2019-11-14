@@ -1,5 +1,6 @@
 package com.aba.pindan.site;
 
+
 import com.aba.pindan.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,7 +18,7 @@ public class DemoController {
     private TestService testService;
 
     @RequestMapping("/test")
-    public Long test() {
+    public int test() {
         return testService.insert("this is test");
     }
 }

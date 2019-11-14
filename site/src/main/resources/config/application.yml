@@ -11,17 +11,16 @@ elasticseach:
   host: pindan-prod
 
 mybatis:
-  configLocation: classpath:config/mybatis-config.xml
-  mapperLocations: classpath*:com/aba/pindan/dao/*Mapper.xml
+  mapperLocations: classpath*:mapper/*Mapper.xml
 
 ---
 spring:
   profiles: dev
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/d_yaneuxe?useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
     username: root
-    password: root
+    password: ******
 
 server:
   port: 8011
@@ -35,7 +34,7 @@ elasticseach:
 spring:
   profiles: prod
   datasource:
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf-8
       username: root
       password: root

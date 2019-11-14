@@ -1,14 +1,15 @@
 package com.aba.pindan.dao.entity;
 
-public class TestEntity {
-    private long id;
+public class Test {
+    private Integer id;
+
     private String name;
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -17,6 +18,6 @@ public class TestEntity {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 }

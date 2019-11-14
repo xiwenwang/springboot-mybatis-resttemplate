@@ -1,8 +1,8 @@
 package com.aba.pindan.service.impl;
 
+import com.aba.pindan.dao.entity.Test;
 import com.aba.pindan.dao.mapper.TestMapper;
 import com.aba.pindan.service.TestService;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -14,10 +14,12 @@ public class TestServiceImpl implements TestService {
     private TestMapper testMapper;
 
     @Override
-    public long insert(String name) {
-        Long insertId = 0L;
+    public int insert(String name) {
+        int insertId = 0;
         try {
-            insertId = testMapper.insert(name);
+            Test record = new Test();
+            record.setName(name);
+            insertId = testMapper.insert(record);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

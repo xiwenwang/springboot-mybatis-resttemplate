@@ -82,9 +82,7 @@
                     <skipTests>true</skipTests>    <!--默认关掉单元测试 -->
                 </configuration>
             </plugin>
-
         </plugins>
-
     </build>
 	<profiles>
 		<profile>
