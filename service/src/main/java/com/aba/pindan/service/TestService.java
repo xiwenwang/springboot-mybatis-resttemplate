@@ -2,5 +2,5 @@ package com.aba.pindan.service;
 
 public interface TestService {
 
-    int insert(String name);
+    int insert(String name) throws Exception;
 }
