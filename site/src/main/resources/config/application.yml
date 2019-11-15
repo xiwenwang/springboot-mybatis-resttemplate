@@ -15,12 +15,17 @@ mybatis:
 logging:
   config: classpath:config/logback.xml
 
+resttemplate:
+  connectTimeout: 300000
+  readTimeout: 300000
+
+
 ---
 spring:
   profiles: dev
   datasource:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf-8
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
       username: root
       password: root
 
