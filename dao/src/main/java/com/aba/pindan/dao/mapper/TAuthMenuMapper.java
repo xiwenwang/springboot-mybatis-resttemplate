@@ -3,8 +3,11 @@ package com.aba.pindan.dao.mapper;
 import com.aba.pindan.dao.entity.TAuthMenu;
 import com.aba.pindan.dao.entity.TAuthMenuExample;
 import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+@Mapper
 public interface TAuthMenuMapper {
     int countByExample(TAuthMenuExample example);
 

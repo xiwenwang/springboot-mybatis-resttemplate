@@ -58,6 +58,7 @@
 	</dependencies>
 
 	<modules>
+		<module>common</module>
 		<module>dao</module>
 		<module>iao</module>
 		<module>service</module>
