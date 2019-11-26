@@ -1,14 +1,19 @@
 spring:
   profiles:
     active: @profiles.active@
+  mvc:
+    throw-exception-if-no-handler-found: true
+#  resources:
+#    add-mappings: false
+
 
 server:
   port: 7099
   servlet:
-    context-path: /pindan-prod
+    context-path: /demo
 
 elasticseach:
-  host: pindan-prod
+  host: demo
 
 mybatis:
   mapperLocations: classpath*:mapper/*Mapper.xml
@@ -32,10 +37,10 @@ spring:
 server:
   port: 8011
   servlet:
-    context-path: /pindan-dev
+    context-path: /demo
 
 elasticseach:
-  host: pindan-dev
+  host: demo
 
 ---
 spring:
@@ -49,7 +54,7 @@ spring:
 server:
   port: 8012
   servlet:
-    context-path: /pindan-prod
+    context-path: /demo
 
 elasticseach:
-  host: pindan-prod
+  host: demo

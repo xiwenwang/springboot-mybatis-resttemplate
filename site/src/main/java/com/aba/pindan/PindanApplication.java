@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan("com.aba.pindan")
 @SpringBootApplication
 public class PindanApplication {
 
