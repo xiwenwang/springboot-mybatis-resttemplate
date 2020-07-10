@@ -9,10 +9,7 @@ import com.aba.pindan.util.ResultParamEnum;
 import com.aba.pindan.util.ResultUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,7 +26,7 @@ public class DemoController {
     @Autowired
     private GetAccessTokenClent accessTokenClent;
 
-    @RequestMapping("/test")
+    @PostMapping("/test")
     public HttpResponse test(@RequestParam String name) {
         Integer a=0;
         try {
@@ -40,7 +37,7 @@ public class DemoController {
         }
     }
 
-    @RequestMapping(value = "/getList")
+    @GetMapping(value = "/getList")
     public HttpResponse getList() {
         try {
             List<TestResponse> result = testService.getList();
@@ -50,8 +47,8 @@ public class DemoController {
         }
     }
 
-    @RequestMapping(value = "/getToken", method = RequestMethod.GET)
-    public HttpResponse getToken() {
+    @GetMapping(value = "/getToken")
+    public HttpResponse getToken(@RequestParam Integer id) {
         try {
             Object a = accessTokenClent.getAccessToken();
             return ResultUtil.success(a);

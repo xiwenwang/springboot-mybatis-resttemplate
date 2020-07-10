@@ -16,14 +16,14 @@ import java.util.Map;
 public class GlobalException {
 
     @ExceptionHandler(value = HttpMessageConversionException.class)
-    ResponseEntity<Map> httpMessageConversionException(HttpMessageConversionException e) {
+    public ResponseEntity<Map> httpMessageConversionException(HttpMessageConversionException e) {
         Map<String, String> map = new HashMap<>();
         map.put("suceess", "false");
         return new ResponseEntity<>(map, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(value = ServletRequestBindingException.class)
-    ResponseEntity<Map> noHandle() {
+    public ResponseEntity<Map> noHandle() {
         Map<String, String> map = new HashMap<>();
         map.put("suceess", "false");
         return new ResponseEntity<>(map, HttpStatus.BAD_REQUEST);
@@ -36,7 +36,7 @@ public class GlobalException {
      * @return
      */
     @ExceptionHandler(value = Exception.class)
-    ResponseEntity<HttpResponse> globalException(Exception ex) {
+    public ResponseEntity<HttpResponse> globalException(Exception ex) {
 
         HttpResponse response = ResultUtil.error(200, "error");
         return new ResponseEntity<>(response, HttpStatus.OK);
